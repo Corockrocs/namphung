@@ -1,0 +1,117 @@
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <title>Tarjeta de San Valentín</title>
+  <style>
+    body {
+      background-color: #ffc0cb;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      position: relative;
+    }
+    .heart {
+      width: 140px; /* Aumentado tamaño */
+      position: absolute;
+    }
+    .top-left { top: 20px; left: 20px; }
+    .top-right { top: 20px; right: 20px; }
+    .bottom-left { bottom: 20px; left: 20px; }
+    .bottom-right { bottom: 20px; right: 20px; }
+    .card {
+      text-align: center;
+      padding: 20px;
+    }
+    .hidden {
+      display: none;
+    }
+    .flower {
+      width: 300px; 
+      margin: 60px; 
+    }
+    .puppy {
+      width: 200px; 
+      margin: 0 80px; 
+    }
+    h2, h3 {
+      font-family: 'Great Vibes', cursive;
+      letter-spacing: 6px; 
+    }
+    h2 {
+      font-size: 52px;
+      margin-bottom: 40px;
+    }
+    h3 {
+      font-size: 40px; 
+      margin-top: 40px;
+    }
+    button {
+      margin-top: 50px;
+      padding: 20px 40px;
+      font-size: 22px;
+      background-color: purple;
+      border: 3px solid red; 
+      border-radius: 12px;
+      cursor: pointer;
+      color: white;
+    }
+    .photos img {
+      width: 160px;
+      margin: 15px;
+      border-radius: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="card" id="card">
+    <h2>FOR MY DEAR NAMPHUNG</h2>
+    <div>
+      <img src="imagenes/imagen perro.png" alt="Puppy" class="puppy" />
+      <img src="imagenes/floor morada 2.png" alt="Flor" class="flower" />
+      <img src="imagenes/imagen perro.png" alt="Puppy" class="puppy" />
+    </div>
+    <button onclick="showCard()">ABRIR</button>
+  </div>
+
+  <div class="card hidden" id="finalCard">
+    <h2>FOR MY DEAR NAMPHUNG</h2>
+    <img src="imagenes/corazon flotando.png" class="heart top-left" />
+    <img src="imagenes/corazon flotando.png" class="heart top-right" />
+    <img src="imagenes/corazon flotando.png" class="heart bottom-left" />
+    <img src="imagenes/corazon flotando.png" class="heart bottom-right" />
+    <img src="imagenes/flor morada abierta.png" alt="Flor" class="flower" />
+    <h3><span style="color: purple;">สุขสันต์วันวาเลนไทน์</span> คุณสวยมาก</h3>
+    <div class="photos">
+      <img src="imagenes/WhatsApp Image 2025-02-12 at 11.20.28 PM.jpeg" alt="Photo" />
+      <img src="imagenes/WhatsApp Image 2025-02-12 at 11.20.29 PM (1).jpeg" alt="Photo" />
+      <img src="imagenes/WhatsApp Image 2025-02-12 at 11.20.29 PM (2).jpeg" alt="Photo" />
+      <img src="imagenes/WhatsApp Image 2025-02-12 at 11.20.29 PM (3).jpeg" alt="Photo" />
+      <img src="imagenes/WhatsApp Image 2025-02-12 at 11.20.29 PM.jpeg" alt="Photo" />
+    </div>
+  </div>
+  <img src="imagenes/corazon flotando.png" class="heart top-left" />
+  <img src="imagenes/corazon flotando.png" class="heart top-right" />
+  <img src="imagenes/corazon flotando.png" class="heart bottom-left" />
+  <img src="imagenes/corazon flotando.png" class="heart bottom-right" />
+
+  <audio id="bgMusic" loop>
+    <source src="audio/My kind of woman Mac DeMarco (sub español)..mp3" type="audio/mpeg" />
+  </audio>
+
+  <script>
+    function showCard() {
+      document.getElementById('card').classList.add('hidden');
+      document.getElementById('finalCard').classList.remove('hidden');
+      const music = document.getElementById('bgMusic');
+      music.volume = 0.3;
+      music.play();
+    }
+  </script>
+</body>
+</html>
